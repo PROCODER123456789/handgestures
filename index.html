@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Hand geture recognizer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container"></div>
+        <center>
+            <h3 class="btn btn-warning heading">Hand gestures
+              <br>
+              <span>&#128077;</span>
+              <span>&#128076;</span>
+              <span>&#9996;</span>
+              
+              
+            </h3>
+            <br><br>
+      
+            <p style="font-size: 22px;">Take your selfie to generate Gesture emoji
+                <br>
+              <b>👍👌👌</b>
+              </p>
+      
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Cam view </label>
+              <div id="camera"></div>
+              <br><br>
+              <button onclick="takeSnapshot();" class="btn btn-warning">Capture the image</button>
+      
+            </div>
+      
+      
+        
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Prediction 1 -</label>
+          <p class="gesture_name" id="result_Gesture name"></p>
+          <p class="Gesture" id="Update Gesture"></p>
+      
+          <label>Prediction 2 -</label>
+          <p class="Gesture_name" id="result_Gesture_name2"></p>
+          <p class="Gesture" id="Update Gesture"></p>
+        </div>
+           
+      
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <label>Snapshot-</label>
+              <div id="result"></div>
+              <br><br>
+              <button onclick="check();" class="btn btn-success">Predict Gestures</button>
+            </div>
+      
+          </center>
+      <script src="main.js"></script>
+    </body>
+</html>
